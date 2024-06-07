@@ -1,0 +1,88 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   10 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "sfEvent"\
+      Description  "ActiveChartEvent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "doneDoubleBufferReInit"\
+      Description  "DoubleBufferInitCheck"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "k"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "C:\Users\liamz\Desktop\ntu-ais\ship model\GNC\ILOSpsi.m:2835-2836"\
+    }\
+    ChartData {\
+      Name         "k_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "C:\Users\liamz\Desktop\ntu-ais\ship model\GNC\ILOSpsi.m:2835-2836"\
+    }\
+    ChartData {\
+      Name         "xk"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "C:\Users\liamz\Desktop\ntu-ais\ship model\GNC\ILOSpsi.m:2912-2914"\
+    }\
+    ChartData {\
+      Name         "xk_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "C:\Users\liamz\Desktop\ntu-ais\ship model\GNC\ILOSpsi.m:2912-2914"\
+    }\
+    ChartData {\
+      Name         "yk"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "C:\Users\liamz\Desktop\ntu-ais\ship model\GNC\ILOSpsi.m:2915-2917"\
+    }\
+    ChartData {\
+      Name         "yk_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "C:\Users\liamz\Desktop\ntu-ais\ship model\GNC\ILOSpsi.m:2915-2917"\
+    }\
+    ChartData {\
+      Name         "y_int"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "C:\Users\liamz\Desktop\ntu-ais\ship model\GNC\ILOSpsi.m:2987-2992"\
+    }\
+    ChartData {\
+      Name         "y_int_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "C:\Users\liamz\Desktop\ntu-ais\ship model\GNC\ILOSpsi.m:2987-2992"\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

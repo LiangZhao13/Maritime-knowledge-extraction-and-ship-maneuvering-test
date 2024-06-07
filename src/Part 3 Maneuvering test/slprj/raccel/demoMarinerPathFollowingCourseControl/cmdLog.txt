@@ -1,0 +1,22 @@
+	---> Registering atexit function
+	---> i18n_init
+	---> Parse Arguments
+	---> sdiInitializeForHostBasedTarget
+	---> Initialize the model
+	---> rsimLoadOptionsFromMATFile
+The argument '-tgtconn_server_info_file' passed to rtiostream_tcpip is not valid and will be ignored.
+The argument 'C:\Users\liamz\AppData\Local\Temp\tgtconnp54ba80bb_0152_4d71_a19a_856040572253.info' passed to rtiostream_tcpip is not valid and will be ignored.
+The argument '-tgtconn_port' passed to rtiostream_tcpip is not valid and will be ignored.
+The argument '0' passed to rtiostream_tcpip is not valid and will be ignored.
+Active waypoints:
+  (x1, y1) = (0.00, 0.00) 
+  (x2, y2) = (2000.00, 0.00) 
+	---> slsaFreeOPModelData
+	---> rt_FreeParamStructs
+	---> TgtConnTerm
+	---> rtwISigstreamManagerDestroyInstance
+	---> rtwLoggingIntervalDestroyInstance
+	---> rt_RapidReleaseDiagLoggerDB
+	---> rt_RapidFreeGbls
+	---> rtDestroyRevalMgr
+	---> done raccel main

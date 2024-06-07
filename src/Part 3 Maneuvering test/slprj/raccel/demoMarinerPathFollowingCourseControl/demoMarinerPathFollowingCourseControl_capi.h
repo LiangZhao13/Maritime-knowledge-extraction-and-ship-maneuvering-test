@@ -1,0 +1,6 @@
+#ifndef demoMarinerPathFollowingCourseControl_capi_h_
+#define demoMarinerPathFollowingCourseControl_capi_h_
+#include "demoMarinerPathFollowingCourseControl.h"
+extern void demoMarinerPathFollowingCourseControl_InitializeDataMapInfo (
+void ) ;
+#endif

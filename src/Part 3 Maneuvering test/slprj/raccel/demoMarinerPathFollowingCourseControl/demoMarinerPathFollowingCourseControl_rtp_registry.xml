@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_rtp_registry/R2023a">
+  <slsa.mm.rtpregistry.ModelMetadata type="slsa.mm.rtpregistry.ModelMetadata" uuid="7a446c5b-4a85-4df3-ad08-0b4a925a1130">
+    <modelName>demoMarinerPathFollowingCourseControl</modelName>
+  </slsa.mm.rtpregistry.ModelMetadata>
+</MF0>
