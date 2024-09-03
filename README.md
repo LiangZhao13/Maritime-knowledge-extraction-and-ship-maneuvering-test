@@ -1,6 +1,6 @@
 # (to be finished) Maritime-knowledge-extraction-and-ship-maneuvering-test
 This is the official code to reproduce the results of our paper: \
-`Integrating Autonomous Maneuvering and Maritime Knowledge for Enhanced Route Planning: A Case Study on the Singapore-Rotterdam Green and Digital Shipping Corridor`
+`Intelligent Shipping: Integrating Autonomous Maneuvering and Maritime Knowledge in the Singapore-Rotterdam Corridor`
 
 
 
