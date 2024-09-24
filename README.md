@@ -1,4 +1,4 @@
-# (to be finished) Maritime-knowledge-extraction-and-ship-maneuvering-test
+# Maritime-knowledge-extraction-and-ship-maneuvering-test
 This is the official code to reproduce the results of our paper: \
 `Intelligent Shipping: Integrating Autonomous Maneuvering and Maritime Knowledge in the Singapore-Rotterdam Corridor`
 
