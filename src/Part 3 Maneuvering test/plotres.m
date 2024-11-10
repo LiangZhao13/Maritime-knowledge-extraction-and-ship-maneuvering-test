@@ -40,10 +40,10 @@ g.LatitudeLabel.String = 'Latitude';
 g.LongitudeLabel.String = 'Longitude';
 g.TickLabelFormat = "-dd";
 hold on
-data = importdata('WP2.csv');
+data = importdata('WP.csv');
 WP=data.data;
 WP(:, 1) = [];
-WP = flip(WP);
+% WP = flip(WP);
 geoplot(g,WP(1:202,2),WP(1:202,1),...,
          Color='g', Marker= 'o', LineWidth=1, Parent=g)
 hold on
@@ -59,7 +59,7 @@ hold on
 
 legend('AIS points', 'Our model',...
     'FontSize', 12,'FontName','Times New Roman', 'FontWeight', 'bold')
-savefig('results\results 5\tracking.fig')
+% savefig('results\results 5\tracking.fig')
 
 
 
@@ -77,7 +77,7 @@ data = importdata('WP2.csv');
 WP=data.data;
 WP(:, 1) = [];
 WP = flip(WP);
-geoplot(g,WP(:,2),WP(:,1),...,
+geoplot(g,WP(1:202,2),WP(1:202,1),...,
          Color='g', Marker= 'o', LineWidth=1, Parent=g)
 hold on
 traj = local2ll([x y], 'WP2.csv');
@@ -91,7 +91,7 @@ hold on
 
 legend('AIS points', 'Ship trajectory',...
     'FontSize', 12,'FontName','Times New Roman', 'FontWeight', 'bold')
-savefig('results\results 5\zoomin.fig')
+% savefig('results\results 5\zoomin.fig')
 
 %% profile
 % speed
@@ -117,10 +117,10 @@ set(gca,'linewidth',1);
 set(gca,'FontName','Times New Roman', 'FontSize',12)
 title('Course command', 'FontName','Times New Roman',  'FontSize',14, 'FontWeight', 'bold');
 xlabel('Time (days)',  'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold');
-ylabel('\chi (rad)',  'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold');
+ylabel('\chi (deg)',  'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold');
 hold on
-plot(t, chi_hat, 'r', 'lineWidth', 1.5);
-plot(t, chi_d, 'b', 'lineWidth', 1);
+plot(t, rad2deg(ssa(chi)), 'r', 'lineWidth', 1.5);
+plot(t, rad2deg(ssa(chi_d)), 'b', 'lineWidth', 1);
 % plot(t, chi_hat, 'g', 'lineWidth', 1);
 legend('\chi', '\chi_d','FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold', 'location', 'northeast');
 
@@ -131,11 +131,11 @@ set(gca,'linewidth',1);
 set(gca,'FontName','Times New Roman', 'FontSize',12)
 title('Rudder command', 'FontName','Times New Roman',  'FontSize',14, 'FontWeight', 'bold');
 xlabel('Time (days)',  'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold');
-ylabel('\delta (rad)',  'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold');
+ylabel('\delta (deg)',  'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold');
 hold on
 % beta = mod(pi+beta, 2*pi)- pi;
-plot(t, delta, 'r', 'lineWidth', 2);
-plot(t, delta_d, 'b', 'lineWidth', 1);
+plot(t, rad2deg(ssa(delta)), 'r', 'lineWidth', 2);
+plot(t, rad2deg(ssa(delta_d)), 'b', 'lineWidth', 1);
 legend('\delta', '\delta_d','FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold', 'location', 'Southeast');
 savefig('results\results 5\command.fig')
 
@@ -150,10 +150,10 @@ set(gca,'linewidth',1);
 set(gca,'FontName','Times New Roman', 'FontSize',12)
 title('Course rate', 'FontName','Times New Roman',  'FontSize',14, 'FontWeight', 'bold');
 xlabel('Time (days)',  'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold');
-ylabel('\omega_\chi (rad/s)',  'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold');
+ylabel('\omega_\chi (deg/s)',  'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold');
 hold on
-plot(t, omega_chi, 'r', 'lineWidth', 1.5);
-plot(t, omega_chi_d, 'b', 'lineWidth', 1);
+plot(t, rad2deg(ssa(omega_chi)), 'r', 'lineWidth', 1.5);
+plot(t, rad2deg(ssa(omega_chi_d)), 'b', 'lineWidth', 1);
 legend('\omega_\chi','\omega_\chi_d', 'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold', 'location', 'northeast');
 
 % Psi
@@ -163,9 +163,9 @@ set(gca,'linewidth',1);
 set(gca,'FontName','Times New Roman', 'FontSize',12)
 title('Heading angle', 'FontName','Times New Roman',  'FontSize',14, 'FontWeight', 'bold');
 xlabel('Time (days)',  'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold');
-ylabel('\psi (rad)',  'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold');
+ylabel('\psi (deg)',  'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold');
 hold on
-plot(t, psi, 'r', 'lineWidth', 1.5);
+plot(t, rad2deg(ssa(psi)), 'r', 'lineWidth', 1.5);
 legend('\psi', 'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold', 'location', 'Northeast');
 
 % crab angle
@@ -175,9 +175,9 @@ set(gca,'linewidth',1);
 set(gca,'FontName','Times New Roman', 'FontSize',12)
 title('Crab angle', 'FontName','Times New Roman',  'FontSize',14, 'FontWeight', 'bold');
 xlabel('Time (days)',  'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold');
-ylabel('\beta_c (rad)',  'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold');
+ylabel('\beta_c (deg)',  'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold');
 hold on
-plot(t, beta, 'r', 'lineWidth', 1.5);
+plot(t, rad2deg(ssa(beta)), 'r', 'lineWidth', 1.5);
 legend('\beta_c', 'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold', 'location', 'Northeast');
 savefig('results\results 5\angle.fig')
 
@@ -217,12 +217,12 @@ subplot(3, 1, 3)
 box on;
 set(gca,'linewidth',1);
 set(gca,'FontName','Times New Roman', 'FontSize',12)
-title('Yaw rate (rad/s)','FontName','Times New Roman',  'FontSize',14, 'FontWeight', 'bold')
+title('Yaw rate','FontName','Times New Roman',  'FontSize',14, 'FontWeight', 'bold')
 xlabel('Time (days)',  'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold');
-ylabel('r (rad/s)',  'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold');
+ylabel('r (deg/s)',  'FontSize',12,'FontName','Times New Roman', 'FontWeight', 'bold');
 hold on
 % [v, chi, chi_d, t, x, y, propeller, thrust] = vcload('simulation_proposed_profile.mat');
-plot(t, r, 'r', 'lineWidth', 1.5);
+plot(t, rad2deg(ssa(r)), 'r', 'lineWidth', 1.5);
 hold on
 legend('r',  'FontSize',12,'FontWeight', 'bold', 'location', 'Southeast');
 savefig('results\results 5\velocity.fig')
