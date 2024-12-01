@@ -16,3 +16,8 @@ The code has been tested on a Linux machine with Ubuntu 18.04 only (it is not te
 
 ## Acknowledgements
 The codes of this paper are built from various open-source repositories. We would like to express our deepest gratitude to authors from [movingpandas](https://github.com/movingpandas/movingpandas), [cartopy](https://github.com/SciTools/cartopy), [MSS](https://github.com/cybergalactic/MSS), [Keras](https://github.com/keras-team/keras), and [SDTW](https://github.com/mblondel/soft-dtw). 
+
+
+## Contact
+
+ You can raise an issue at the top or contact liamzhao13@zju.edu.cn (Liang Zhao) directly if you have any questions. 
