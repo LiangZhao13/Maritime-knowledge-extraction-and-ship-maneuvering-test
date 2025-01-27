@@ -1,6 +1,6 @@
 # Maritime-knowledge-extraction-and-ship-maneuvering-test
 This is the official code to reproduce the results of our paper: 
-> *Zhao, L., Xu, M., Liu, L., Bai, Y., Zhang, M., Yan, R., 2025. Intelligent Shipping: Integrating Autonomous Maneuvering and Maritime Knowledge in the Singapore-Rotterdam Corridor. Communications Engineering, 4, p.7.*
+> *Zhao, L., Xu, M., Liu, L., Bai, Y., Zhang, M., Yan, R., 2025. Intelligent Shipping: Integrating Autonomous Maneuvering and Maritime Knowledge in the Singapore-Rotterdam Corridor. Communications Engineering, 4, (In press)*
 
 
 
