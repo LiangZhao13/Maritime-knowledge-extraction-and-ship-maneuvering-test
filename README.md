@@ -5,7 +5,7 @@ This is the official code to reproduce the results of our paper:
 
 
 
-## Data download
+## Data access
 
 The source data can be downloaded using the Google Drive [link](https://drive.google.com/file/d/1-RkI4xIi7AfIiu_7GinqbZGyWaOMjWDs/view?usp=sharing).
 
