@@ -14,8 +14,25 @@ If you want to skip the preprocessing, we also include the processed data here, 
 ## Environment
 The code has been tested on a Linux machine with Ubuntu 18.04 only (it is not tested on Windows machine). The .slx is preferably run on MATLAB 2024a or newer version.
 
+## Citation
+if you use our data or code, please cite our paper:
+
+```
+@article{zhao2025intelligent,
+  title={Intelligent shipping: integrating autonomous maneuvering and maritime knowledge in the Singapore-Rotterdam Corridor},
+  author={Zhao, Liang and Xu, Mengqiao and Liu, Lei and Bai, Yong and Zhang, Mingyang and Yan, Ran},
+  journal={Communications Engineering},
+  volume={4},
+  number={1},
+  pages={11},
+  year={2025},
+  publisher={Nature Publishing Group UK London}
+}
+```
+
 ## Acknowledgements
 The codes of this paper are built from various open-source repositories. We would like to express our deepest gratitude to authors from [movingpandas](https://github.com/movingpandas/movingpandas), [cartopy](https://github.com/SciTools/cartopy), [MSS](https://github.com/cybergalactic/MSS), [Keras](https://github.com/keras-team/keras), and [SDTW](https://github.com/mblondel/soft-dtw). 
+
 
 
 ## Contact
