@@ -15,7 +15,7 @@ If you want to skip the preprocessing, we also include the processed data here, 
 The code has been tested on a Linux machine with Ubuntu 18.04 only (it is not tested on Windows machine). The .slx is preferably run on MATLAB 2024a or newer version.
 
 ## Citation
-if you use our data or code, please cite our paper:
+if you use our data or code, please cite the paper:
 
 ```
 @article{zhao2025intelligent,
